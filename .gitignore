@@ -4,5 +4,8 @@
 # production  打包文件
 /dist
 
+# .config 过滤./config.sj 本地配置文件
+./config.js
+
 # misc 
 .DS_Store
