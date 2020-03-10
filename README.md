@@ -1,23 +1,7 @@
-# gulp web
-## 开发
-1. 安装全局gulp
-```
-npm install -g gulp
-```
-2. 安装脚手架包
-```
-npm install
-```
-3. 进入开发模式
-```
-gulp dev
-```
-4. 代码打包
-```
-gulp build
-```
-## 文件目录说明
 
+# gulp web
+
+## 文件目录说明
 
 ```
 |-- gulp-web
@@ -35,6 +19,32 @@ gulp build
         |-- imag
         |-- js
             |-- index.js
+```
+
+
+## 开发帮助命令
+1. 安装全局gulp
+
+```shell
+npm install -g gulp
+```
+
+2. 安装脚手架包
+
+```shell
+npm install
+```
+
+3. 进入开发模式
+
+```shell
+gulp dev
+```
+
+4. 代码打包
+
+```shell
+gulp build
 ```
 
 ## config配置说明
