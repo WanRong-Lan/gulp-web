@@ -1,5 +1,5 @@
 const gulp = require('gulp')
-const config = require('./config')
+const {DEV_PATH,DIST_Path,middlewares} = require('./.config')
 const connect = require('gulp-connect') // 开发阶段，因为的前后端分离的项目，所以需要一个web服务器, gulp-connect是一个带有livereload的web服务器 
 const changed = require('gulp-changed') // 可以过滤那些改动过的文件
 const sass = require('gulp-sass')
@@ -7,9 +7,7 @@ const plumber = require('gulp-plumber') // 处理pipe破裂导致的错误
 const clean = require('gulp-clean') // 移除文件和文件夹
 const htmlmin = require('gulp-htmlmin') // 压缩html
 
-const path = require('path')
-const DEV_PATH = path.resolve(__dirname, './src')// 开发目录
-const DIST_Path = path.resolve(__dirname, './dist') // 打包目录
+
 
 // 创建一个服务
 gulp.task('connect',function(cd){
@@ -19,12 +17,7 @@ gulp.task('connect',function(cd){
         port: 8080,
         livereload: true,
         middleware: function(connect, opt) { //设置代理
-            return [
-                // proxy('/index', {
-                //     target: 'http://youwebsite.com',
-                //     changeOrigin: true
-                // })
-            ]
+            return middlewares
         }
     });
     cd()
