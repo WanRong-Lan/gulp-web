@@ -6,11 +6,11 @@ const sass = require('gulp-sass')
 const plumber = require('gulp-plumber') // 处理pipe破裂导致的错误
 const clean = require('gulp-clean') // 移除文件和文件夹
 const htmlmin = require('gulp-htmlmin') // 压缩html
-
-
-
+const server = require('./dev.server')
+let devServer = null
 // 创建一个服务
 gulp.task('connect',function(cd){
+    
     connect.server({
         root: `${DEV_PATH}`,
         host:'0.0.0.0',
@@ -20,6 +20,8 @@ gulp.task('connect',function(cd){
             return middlewares
         }
     });
+
+    devServer = server.devServer()
     cd()
 })
 

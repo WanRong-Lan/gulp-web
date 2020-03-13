@@ -1,11 +1,13 @@
+# .config 过滤config.sj 本地配置文件
+.config.js
+
 # dependencies  npm包文件
 /node_modules
 
 # production  打包文件
 /dist
 
-# .config 过滤./config.sj 本地配置文件
-./config.js
-
+# 过滤打包文件
+output.zip
 # misc 
 .DS_Store
