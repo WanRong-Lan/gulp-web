@@ -34,7 +34,6 @@ gulp.task('watch',function(cd){
 
 // html 任务：专门处理.html文件的
 gulp.task('html',function(cd){
-    console.log(gulp.dest('dev'))
     return gulp.src(`${DEV_PATH}/**/*.html`)
         .pipe(changed('dev', { 
             hasChanged: changed.compareLastModifiedTime ////比较修改时间
@@ -45,7 +44,6 @@ gulp.task('html',function(cd){
 
 // CSS 
 gulp.task('css',function(cd){
-    console.log(`${DEV_PATH}/**/*.{css}`)
     return gulp.src(`${DEV_PATH}/**/*.{css}`)
         .pipe(changed('dev/', {
             hasChanged: changed.compareLastModifiedTime, //比较修改时间
