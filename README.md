@@ -40,6 +40,20 @@ npm install
 ```shell
 gulp dev
 ```
+```
+输出：
+Wanrong:gulp-web lwr$ gulp dev
+[11:05:57] Using gulpfile ~/work/WWZL/gulp-web/gulpfile.js
+[11:05:57] Starting 'dev'...
+[11:05:57] Starting 'connect'...
+[11:05:57] Starting 'watch'...
+[11:05:57] Starting server...
+代码包地址： http://192.168.4.150:8060/output.zip // 输出的是APP联调下载前端代码包地址
+[11:05:57] Finished 'connect' after 7.21 ms
+[11:05:57] Server started http://0.0.0.0:8080
+[11:05:57] LiveReload started on port 35729
+[11:05:57] Running server
+```
 
 4. 代码打包
 
